@@ -7,44 +7,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static  'home.css' %}" > 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'home.css' %}" > 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+     <style>
 
+        body {
+        background-image: url('static/img/background.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+      </style>
     
 </head>
 
-<body>
-    <section>
-
-        <nav>
-
-            <div>
-                <img src="/static/img/violation.jpg" width="12%" height="5%">
+<body class="m-5">
+    <div class="container rounded-top" style="background-color: rgba(0, 0, 0, 0.7) !important;">
+        <nav class="navbar" >
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="/static/img/violationicon.jpg" alt="" width="100" height="100" class="d-inline-block align-text-top">
+               
+              </a>
+              <h2 id="h2">Violation system</h2>
+              <div>
+              <button  class="btn btn-outline-danger ">Sign in</button>
+              <button  class="btn btn-outline-danger ">Sign up</button>
             </div>
-            <div class="hed">
-                <h1>Your Violation Checker</h1>
-            </div>
+            
+          </nav>
+          <hr class="hr">
+          <div>
 
-        </nav>
-        <div class="containor">
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamu
-                    iste corporis unde eos voluptatum quod numquam, eaque fugiat,
-                    maxime similique consequuntur. Debitis nam maxime fugiat, omnis
-                    delectus ipsum doloribus id.
-                </p>
+            <div class="d-flex p-5 ">
+                <div class="flex-grow-1 ms-3  ">
+                    <p>Welocme to your violation checker! <br>
+                        this website helps you to reach to your traffic violations online from anywhere in the country,
+                        <br>
+                        all you need is a profile here and all your violations deatails will be reserved here.
+                     </p>
+                </div>
+                <div class="flex-shrink-0">
+                    <img src="/static/img/police-station.png" width="150px" hight="100px">
+                </div>
             </div>
-            <div id="right_img">
-                <img src="/static/img/police-station.png" width="50%">
+            <hr>
+            <div class="d-flex p-5">
+                <div class="flex-shrink-0 me-5">
+                    <img src="/static/img/traffic.png" width="100px">
+                </div>
+                <div class="flex-grow-1 ms-3 ">
+                    <p>Welocme to your violation checker! <br>
+                        this website helps you to reach to your traffic violations online from anywhere in the country,
+                        <br>
+                        all you need is a profile here and all your violations deatails will be reserved here.
+                     </p>
+                </div>
+              
             </div>
 
         </div>
-        <div class="btn">
-            <input type="submit" name="Sign_in" value="Sign in">
-            <input type="submit" name="Sign_up" value="Sign up">
-        </div>
-
-    </section>
+    </div>
 </body>
 
 </html>

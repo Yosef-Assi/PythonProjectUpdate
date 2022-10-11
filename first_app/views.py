@@ -1,3 +1,4 @@
+from multiprocessing import context
 from django.shortcuts import render,HttpResponse,redirect
 import bcrypt
 from .models import *
@@ -5,9 +6,16 @@ from django.contrib import messages
 
 
 def policeinfo(request):
-     return render(request, 'policeinfo.html')
+    context={
+        "police" :Police.objects.get(id= request.session['police_id'] )
+    }
+    return render(request, 'policeinfo.html',context)
+
 def driver(request):
-    return render(request, 'driver.html')
+    context={
+        'driver':Driver.objects.get(id=request.session['driver_id'])
+    }
+    return render(request, 'driver.html',context)
 
 def police(request):
     return render(request, 'police.html')
